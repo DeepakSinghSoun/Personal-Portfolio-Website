@@ -55,10 +55,8 @@ body {
     color: #00abf0;
 }
 
-
 .home {
     height: 100vh;
-    /* background: url('/My\ Photo.jpg'); */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -176,7 +174,6 @@ body {
     color: #00abf0;
 }
 
-
 .btn-box a:nth-child(2):hover {
     color: #081b29;
 }
@@ -260,6 +257,16 @@ body {
     width: 100%;
 }
 
+.Profile-img img {
+    border-radius: 50%;
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rem;
+}
+
 .home-imgHover {
     position: absolute;
     top: 0;
@@ -291,15 +298,50 @@ body {
     opacity: 0.8;
 }
 
-
 @keyframes showRight {
+    0% {
+        width: 100%;
+    }
     100% {
         width: 0;
     }
 }
 
 @keyframes manipActiveHover {
+    0% {
+        pointer-events: none;
+    }
     100% {
         pointer-events: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+    .navbar a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .home {
+        padding: 0 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-content {
+        max-width: 100%;
+    }
+    .home-content h1 {
+        font-size: 40px;
+    }
+    .home-content h3 {
+        font-size: 24px;
+    }
+    .home-content p {
+        font-size: 14px;
+    }
+    .home-sci {
+        justify-content: center;
     }
 }
